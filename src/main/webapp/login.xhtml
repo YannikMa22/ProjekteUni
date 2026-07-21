@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+
+<h:head>
+    <title>Login</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 400px; margin: 80px auto; color: #333; }
+        h1 { color: #2e7d32; }
+        table { width: 100%; }
+        td { padding: 6px; }
+        input[type="text"], input[type="password"] {
+            padding: 6px; width: 100%; border: 1px solid #ccc; border-radius: 3px;
+        }
+        input[type="submit"], button {
+            background-color: #2e7d32; color: white; border: none;
+            padding: 8px 20px; cursor: pointer; border-radius: 3px; width: 100%;
+        }
+        input[type="submit"]:hover, button:hover { background-color: #1b5e20; }
+    </style>
+</h:head>
+
+<h:body>
+    <h1>Login</h1>
+    <h:form>
+        <table>
+            <tr>
+                <td>Benutzername:</td>
+                <td><h:inputText value="#{loginBean.username}"/></td>
+            </tr>
+            <tr>
+                <td>Passwort:</td>
+                <td><h:inputSecret value="#{loginBean.password}"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><h:commandButton value="Einloggen" action="#{loginBean.login}"/></td>
+            </tr>
+        </table>
+    </h:form>
+
+</h:body>
+</html>
