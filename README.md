@@ -29,6 +29,12 @@ GRANT ALL PRIVILEGES ON hero2zero.* TO 'hero2zero'@'localhost';
 
 Die Tabelle `emission_entry` wird beim ersten Start automatisch von Hibernate angelegt.
 
+Anschließend Demodaten einspielen:
+```sql
+source data.sql
+```
+Oder die Datei `data.sql` direkt in MySQL Workbench öffnen und ausführen.
+
 ## Projekt starten
 
 1. Repository klonen:
